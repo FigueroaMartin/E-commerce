@@ -1,0 +1,31 @@
+/*  areas de la web */
+
+header {
+    grid-area: "header";
+    background-color: green;
+
+}
+
+
+main {
+    grid-area: "main";
+    background-color: aqua;
+    min-height: 100vh;
+}
+
+footer {
+    grid-area: "footer";
+    background-color: yellow;
+    min-height: 50vh;
+}
+
+/* distrubucion de las areas en la web */
+body {
+    display: grid;
+    min-height: 100vh;
+    margin: 0px;
+    grid-template-areas: "header"
+        "main"
+        "footer";
+
+}
