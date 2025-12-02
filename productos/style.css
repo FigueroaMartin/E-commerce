@@ -1,0 +1,99 @@
+#productos {
+    display: none;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+
+.categorias {
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    margin-left: 20px;
+    font-size: 2rem;
+    color: #2e7d32;
+    font-weight: 800;
+}
+
+
+.categorias:hover {
+    background-color: #93BF34;
+
+}
+
+
+/* formato de la caja donde se encuentra el producto */
+.caja-producto {
+    margin: 10px;
+    display: grid;
+    height: 250px;
+    width: 250px;
+    grid-template-areas: "img"
+        "txt";
+    border: 1px ridge lightgrey;
+    grid-template-rows: 2fr 1fr;
+    grid-auto-rows: 2fr 1fr;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: #2e7d32;
+    place-content: center;
+    background-color: lightgrey;
+
+
+}
+
+/* formato de la caja al pasar el mouse sobre ella  */
+.caja-producto:hover {
+    background-color: aliceblue;
+}
+
+/* Formato de la imagen de el producto */
+.img-producto {
+    grid-area: img;
+    height: auto;
+    max-width: 300px;
+}
+
+
+.img-producto img {
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 2px;
+}
+
+/* formato de el texto que acompaña a la imagen */
+.txt-producto {
+
+    grid-area: txt;
+    height: auto;
+    /* width: 50px; */
+
+
+    text-align: center;
+    font-size: 15px;
+
+}
+
+/* Formato de el marco donde se muestran los productos */
+.marco-productos {
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+
+/* .cat1 {
+    display: none;
+} */
+
+.cat2 {
+    display: inline-block;
+}
+
+/* Formato de las categorias */

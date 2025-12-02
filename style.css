@@ -1,31 +1,291 @@
 /*  areas de la web */
 
 header {
+    min-height: 50px;
+    max-height: 100%;
     grid-area: "header";
-    background-color: green;
+    background-color: #FDFAF2;
+    display: flex;
+    flex-direction: column;
+    /* o row */
+    align-items: stretch;
+    /* Hace que los hijos ocupen todo el ancho */
 
 }
 
-
 main {
     grid-area: "main";
-    background-color: aqua;
+    background-color: #F2EFE9;
     min-height: 100vh;
 }
 
 footer {
     grid-area: "footer";
-    background-color: yellow;
+    background-color: #93BF34;
     min-height: 50vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: black;
 }
 
 /* distrubucion de las areas en la web */
 body {
     display: grid;
-    min-height: 100vh;
     margin: 0px;
     grid-template-areas: "header"
         "main"
         "footer";
 
+}
+
+
+
+/* formato de la navbar */
+
+#navbar {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+    display: grid;
+    grid-auto-flow: column;
+    border: 1px ridge lightgray;
+}
+
+#navbar * {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+    color: #2e7d32;
+    margin: 0;
+    font-weight: 600;
+    border: none;
+    background: none;
+    display: grid;
+    margin-left: 10px;
+    place-content: center;
+    text-align: center;
+    object-fit: fill;
+
+}
+
+#navbar-logo {}
+
+
+
+#navbar *:hover {
+    background-color: #FDFAF2;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+
+}
+
+
+
+/* formato de logo */
+#logo img {
+    height: auto;
+    width: 14vh;
+}
+
+#carrusel {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.carrusel {
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 100vw;
+    margin-top: 30px;
+    overflow: hidden;
+    /* Importante: ocultar el desbordamiento */
+    white-space: nowrap;
+    /* Para que los elementos no se salten de línea */
+    border: 1px solid lightgray;
+}
+
+#grupo {
+    padding-top: 0px;
+    margin-top: 0px;
+    display: flex;
+    gap: 0.1rem;
+    /* Ajustar al contenido */
+    animation: scroll 40s linear infinite;
+
+}
+
+
+.mySlide {
+    width: auto;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex: none;
+    /* Evita que flex los redimensione */
+
+}
+
+.carrusel-nov {
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 100vw;
+    margin-top: 30px;
+    overflow: hidden;
+    /* Importante: ocultar el desbordamiento */
+    white-space: nowrap;
+    /* Para que los elementos no se salten de línea */
+    border: 1px solid lightgray;
+}
+
+#grupo-nov {
+    padding-top: 0px;
+    margin-top: 0px;
+    display: flex;
+    gap: 0.1rem;
+    /* Ajustar al contenido */
+    animation: scroll 40s linear infinite;
+
+}
+
+#grupo-nov * {
+    flex: none;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-300%);
+        /* Desplaza exactamente la mitad del ancho total (porque hay duplicado) */
+    }
+}
+
+#novedades {
+    text-align: center;
+    place-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    color: #2e7d32;
+}
+
+#slogans {
+    width: 100vw;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+    background-color: #FDFAF2;
+}
+
+#slogans-box {
+    display: grid;
+    place-items: center;
+    background-color: #F2EFE9;
+    border: 1px solid lightgray;
+    width: 70vw;
+    height: 25vh;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.slogan {
+    place-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    color: #2e7d32;
+    margin: 0;
+    font-weight: 800;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.slogan img {
+    width: 100px;
+    height: 100px;
+}
+
+#mas-vendidos {
+    text-align: center;
+    place-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    color: #2e7d32;
+}
+
+/* Codigo de el footer */
+.a {
+    height: 100px;
+    grid-area: a;
+
+}
+
+.b {
+    width: 200px;
+    object-fit: fill;
+    grid-area: b;
+    margin-left: 100px;
+
+}
+
+.c {
+    width: 200px;
+    object-fit: fill;
+    grid-area: c;
+}
+
+.d {
+    width: 200px;
+    height: auto;
+    object-fit: fill;
+    grid-area: d;
+    margin-left: 30px;
+}
+
+.d img {
+    border-radius: 10px;
+}
+
+/* footer */
+.block {
+    text-align: center;
+    letter-spacing: 1px;
+    min-height: 200px;
+    display: grid;
+    grid-template-areas: "a a a"
+        " d b c ";
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 2fr 2fr;
+}
+
+ul {
+    padding-left: 0px;
+    margin: 1px;
+    list-style: none;
+    text-align: justify;
+
+}
+
+li {
+    margin-top: 1em;
+}
+
+#sobrenosotros {
+    display: none;
+    text-align: justify;
+    padding-left: 500px;
+    padding-right: 500px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#sobrenosotros h2 {
+    text-align: center;
 }
