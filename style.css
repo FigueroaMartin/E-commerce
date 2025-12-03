@@ -53,7 +53,7 @@ body {
 
 #navbar * {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #2e7d32;
     margin: 0;
     font-weight: 600;
@@ -64,10 +64,13 @@ body {
     place-content: center;
     text-align: center;
     object-fit: fill;
+    width: 31vw;
 
 }
 
-#navbar-logo {}
+#navbar-logo {
+    border: none;
+}
 
 
 
@@ -94,10 +97,10 @@ body {
 }
 
 .carrusel {
-    padding-top: 0px;
-    margin-top: 0px;
+
+    top: 0px;
     width: 100vw;
-    margin-top: 30px;
+    height: 80vh;
     overflow: hidden;
     /* Importante: ocultar el desbordamiento */
     white-space: nowrap;
@@ -106,8 +109,6 @@ body {
 }
 
 #grupo {
-    padding-top: 0px;
-    margin-top: 0px;
     display: flex;
     gap: 0.1rem;
     /* Ajustar al contenido */
@@ -118,7 +119,7 @@ body {
 
 .mySlide {
     width: auto;
-    height: 1000px;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,7 +147,7 @@ body {
     display: flex;
     gap: 0.1rem;
     /* Ajustar al contenido */
-    animation: scroll 40s linear infinite;
+    animation: scroll 30s linear infinite;
 
 }
 
@@ -160,6 +161,7 @@ body {
     }
 
     100% {
+
         transform: translateX(-300%);
         /* Desplaza exactamente la mitad del ancho total (porque hay duplicado) */
     }
@@ -169,7 +171,7 @@ body {
     text-align: center;
     place-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #2e7d32;
 }
 
@@ -187,7 +189,7 @@ body {
     background-color: #F2EFE9;
     border: 1px solid lightgray;
     width: 70vw;
-    height: 25vh;
+    height: 30vh;
     text-align: center;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -195,7 +197,7 @@ body {
 .slogan {
     place-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #2e7d32;
     margin: 0;
     font-weight: 800;
@@ -206,15 +208,15 @@ body {
 }
 
 .slogan img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 
 #mas-vendidos {
     text-align: center;
     place-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #2e7d32;
 }
 
@@ -231,6 +233,10 @@ body {
     grid-area: b;
     margin-left: 100px;
 
+}
+
+.b p {
+    margin-left: 10px;
 }
 
 .c {
@@ -251,16 +257,23 @@ body {
     border-radius: 10px;
 }
 
+.e {
+    width: 200px;
+    object-fit: fill;
+    grid-area: e;
+}
+
 /* footer */
 .block {
+    font-size: medium;
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     min-height: 200px;
     display: grid;
-    grid-template-areas: "a a a"
-        " d b c ";
+    grid-template-areas: "a a a a"
+        " d b c e ";
     grid-template-rows: 1fr 2fr;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
 }
 
 ul {
@@ -278,8 +291,8 @@ li {
 #sobrenosotros {
     display: none;
     text-align: justify;
-    padding-left: 500px;
-    padding-right: 500px;
+    padding-left: 25vw;
+    padding-right: 25vw;
     line-height: 1.5;
     letter-spacing: 0.5px;
     font-weight: 400;
@@ -288,4 +301,22 @@ li {
 
 #sobrenosotros h2 {
     text-align: center;
+    color: #2e7d32;
+}
+
+#sobrenosotros div {
+    width: 50vw;
+    height: 35vh;
+    text-align: center;
+    background-color: #FDFAF2;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+#sobrenosotros div img {
+    width: 30%;
+    justify-content: center;
+    margin-top: 30px;
 }
