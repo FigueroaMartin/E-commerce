@@ -220,6 +220,57 @@ body {
     color: #2e7d32;
 }
 
+
+#informacion {
+    display: none;
+    place-items: center;
+}
+
+.padre {
+    display: grid;
+    width: 50vw;
+    height: 80vh;
+
+    grid-auto-flow: rows;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr repeat(2, 2fr);
+
+
+
+
+}
+
+.hijos {
+
+    justify-content: left;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    background-color: #F2EFE9;
+    border: 1px solid black;
+
+}
+
+.padre :first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.hijos h2 {
+    text-align: center;
+}
+
+.hijos h3 {
+    text-align: center;
+}
+
+.hijos p {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+
+
 /* Codigo de el footer */
 .a {
     height: 100px;

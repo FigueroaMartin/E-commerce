@@ -54,4 +54,27 @@ function mostrarProductos(categoria) {
 }
 
 
-window.open("https://ejemplo.com");
+
+function mostrarinfo() {
+    const secciones = document.querySelectorAll('section');
+    secciones.forEach(seccion => {
+        seccion.style.display = 'none';
+    });
+    document.getElementById("informacion").style.display = 'block'
+
+    document.getElementById("informacion").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+// Source - https://stackoverflow.com/a
+// Posted by sriyanjith
+// Retrieved 2025-12-03, License - CC BY-SA 4.0
+
+const scrollToProjects = () => {
+    var projectsSection = document.getElementById("projects");
+    projectsSection.scrollIntoView({
+        behavior: "smooth"
+    });
+}
